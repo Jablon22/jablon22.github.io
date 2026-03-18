@@ -1,40 +1,34 @@
-:root {
-  --bg-main:       #f2ede6;
-  --bg-dark:       #1c1914;
-  --text-primary:  #1c1914;
-  --text-secondary:#7a7168;
-  --text-light:    #f2ede6;
-  --accent:        #8c6a3f;
-  --border:        rgba(140, 106, 63, 0.25);
-  --border-subtle: rgba(28, 25, 20, 0.1);
-  --font-display:  'Cormorant Garamond', 'Garamond', Georgia, serif;
-  --font-body:     'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
-}
+/* =============================================
+   STYL_MENU_GORNE.CSS — Top navigation module
+   Modular stylesheet for the sticky header
+   ============================================= */
 
+/* ── STICKY HEADER ── */
 .top-menu {
   position: sticky;
   top: 0;
-  background: rgba(242, 237, 230, 0.96);
+  background: rgba(242, 237, 230, 0.97);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid rgba(28, 25, 20, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 48px;
+  padding: 0 5%;
   height: 64px;
   z-index: 1000;
-  letter-spacing: 0.12em;
 }
 
+/* ── LOGO ── */
 .logo {
-  font-family: var(--font-display);
+  font-family: 'Cormorant Garamond', 'Garamond', Georgia, serif;
   font-weight: 300;
   font-size: 22px;
-  color: var(--text-primary);
+  color: #1c1914;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   position: relative;
+  cursor: default;
 }
 
 .logo::after {
@@ -44,7 +38,7 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background: var(--accent);
+  background: #8c6a3f;
   transform: scaleX(0.4);
   transform-origin: left;
   transition: transform 0.4s ease;
@@ -52,45 +46,117 @@
 
 .logo:hover::after { transform: scaleX(1); }
 
-.top-menu nav { display: flex; align-items: center; }
+
+/* ── HAMBURGER BUTTON (mobile only) ── */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1010;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #1c1914;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  transform-origin: center;
+}
+
+/* Animate hamburger to X when menu is open */
+.hamburger.is-open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+.hamburger.is-open span:nth-child(2) { opacity: 0; }
+.hamburger.is-open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+
+/* ── NAVIGATION (mobile: hidden drawer) ── */
+#main-nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: 0;
+  background: rgba(242, 237, 230, 0.99);
+  border-bottom: 1px solid rgba(140, 106, 63, 0.18);
+  padding: 16px 0;
+}
+
+#main-nav.is-open { display: flex; }
 
 .top-menu a {
-  font-family: var(--font-body);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
   font-size: 10px;
   font-weight: 400;
-  color: var(--text-secondary);
+  color: #7a7168;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.25em;
-  padding: 8px 20px;
+  padding: 14px 5%;
   position: relative;
   transition: color 0.3s ease;
-  border-right: 1px solid var(--border-subtle);
 }
-
-.top-menu a:first-child { border-left: 1px solid var(--border-subtle); }
 
 .top-menu a::before {
   content: '';
   position: absolute;
-  bottom: 0; left: 50%;
-  transform: translateX(-50%);
-  width: 0; height: 1px;
-  background: var(--accent);
+  bottom: 6px;
+  left: 5%;
+  width: 0;
+  height: 1px;
+  background: #8c6a3f;
   transition: width 0.3s ease;
 }
 
-.top-menu a:hover        { color: var(--accent); }
-.top-menu a:hover::before{ width: 60%; }
-.top-menu a:visited      { color: var(--text-secondary); }
-.top-menu a:focus        { outline: 1px solid var(--accent); outline-offset: 4px; color: var(--accent); }
+.top-menu a:hover        { color: #8c6a3f; }
+.top-menu a:hover::before{ width: 24px; }
+.top-menu a:visited      { color: #7a7168; }
+.top-menu a:focus        { outline: 2px solid #8c6a3f; outline-offset: 3px; color: #8c6a3f; }
 
-@media (max-width: 767px) {
-  .top-menu { padding: 0 20px; height: 56px; }
-  .top-menu a { font-size: 9px; padding: 6px 12px; letter-spacing: 0.15em; }
-  .logo { font-size: 18px; }
+/* Active section highlight (set by JS) */
+.top-menu a.active { color: #8c6a3f; }
+
+
+/* ── TABLET & DESKTOP: inline nav, hide hamburger ── */
+@media (min-width: 768px) {
+
+  .top-menu { padding: 0 8%; }
+
+  .hamburger { display: none; }
+
+  #main-nav {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: transparent;
+    border: none;
+    padding: 0;
+    align-items: center;
+  }
+
+  .top-menu a {
+    padding: 8px 20px;
+    border-right: 1px solid rgba(28, 25, 20, 0.06);
+  }
+
+  .top-menu a:first-child { border-left: 1px solid rgba(28, 25, 20, 0.06); }
+
+  .top-menu a::before {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+
+  .top-menu a:hover::before { width: 60%; }
 }
 
-@media (max-width: 480px) {
-  .top-menu a { padding: 6px 8px; font-size: 8px; letter-spacing: 0.1em; }
+@media (min-width: 1024px) {
+  .top-menu { padding: 0 10%; }
 }

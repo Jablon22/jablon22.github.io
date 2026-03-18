@@ -3,172 +3,227 @@
 <head>
 
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jakub Groblicki</title>
   <meta name="author" content="Jakub Groblicki">
-  <meta name="description" content="Personal site of Jakub Groblicki — Computer Science & Econometrics student interested in data analysis and statistics.">
-  <meta name="keywords" content="portfolio, data analysis, Python, R, econometrics">
+  <meta name="description" content="Personal site of Jakub Groblicki — Computer Science and Econometrics student interested in data analysis and statistics.">
+  <meta name="keywords" content="portfolio, data analysis, Python, R, econometrics, statistics">
 
   <link rel="shortcut icon" href="Images/favicon.jpg">
-  <link rel="stylesheet" href="Styles/style_top_menu.css">
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="Styles/styles.css">
+  <link rel="stylesheet" href="Styles/style_top_menu.css">
 
 </head>
 <body>
 
-  <header class="top-menu">
+  <!-- =============================================
+       HEADER / NAVIGATION
+       ============================================= -->
+  <header class="top-menu" id="top-menu">
     <div class="logo">JG</div>
-    <nav>
-      <a href="#section1">About</a>
-      <a href="#section2">Projects</a>
-      <a href="#section3">Skills</a>
-      <a href="#section4">Contact</a>
+
+    <!-- Hamburger button — visible on mobile only -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="main-nav">
+      <a href="#section-about">About</a>
+      <a href="#section-projects">Projects</a>
+      <a href="#section-skills">Skills</a>
+      <a href="#section-contact">Contact</a>
     </nav>
   </header>
 
 
-  <!-- HERO -->
-  <section class="hero">
+  <!-- =============================================
+       HERO SECTION
+       ============================================= -->
+  <section class="hero" id="hero">
     <div class="hero-text">
-      <span class="hero-eyebrow">Jakub Groblicki &nbsp;·&nbsp; 2026</span>
-      <h1>Hi,<br>I'm <em>Jakub</em></h1>
-      <p class="hero-subtitle">Computer Science & Econometrics student. Interested in data analysis, statistics, and what they reveal.</p>
+      <span class="hero-eyebrow">Jakub Groblicki &nbsp;&middot;&nbsp; 2026</span>
+      <h1>Hi,<br>I&rsquo;m <em>Jakub</em></h1>
+      <p class="hero-subtitle">Computer Science &amp; Econometrics student. Interested in data analysis, statistics, and what they reveal.</p>
       <div class="hero-actions">
-        <a href="#section2" class="cta-button">My Projects</a>
-        <a href="#section4" class="cta-secondary">Contact</a>
+        <a href="#section-projects" class="cta-button">My Projects</a>
+        <a href="#section-contact" class="cta-secondary">Contact</a>
       </div>
     </div>
 
     <div class="hero-image-col">
-      <img src="Images/profiloweJG.jpeg" alt="Jakub Groblicki" class="profile-photo">
+      <img src="Images/profiloweJG.jpeg" alt="Portrait of Jakub Groblicki" class="profile-photo">
+      <p class="photo-caption">Krak&oacute;w, 2026</p>
     </div>
 
-    <div class="hero-scroll">Scroll down</div>
+    <p class="hero-scroll">Scroll down</p>
   </section>
 
 
-  <div class="container-main">
-
-    <hr>
+  <!-- =============================================
+       MAIN CONTENT
+       ============================================= -->
+  <main>
 
     <!-- ABOUT -->
-    <div class="container" id="section1">
-      <p class="section-label">01 &nbsp; About</p>
-      <div class="about-grid">
-        <div class="about-text">
-          <h2>Who I am</h2>
-          <p>
-            I'm a student with a strong interest in data analysis, statistics, and programming.
-            My coursework involves data analysis projects, database systems, and statistical modelling.
-            I'm drawn to machine learning and modern technologies, and I'm working towards a career in data science.
-          </p>
-        </div>
-        <div class="about-photo-wrap">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" alt="Data analysis" class="about-photo">
-          <span class="about-photo-label">Data analysis</span>
+    <section id="section-about">
+      <div class="container">
+        <p class="section-label">01 &nbsp; About</p>
+        <div class="about-grid">
+
+          <div class="about-text">
+            <h2>Who I am</h2>
+            <p>
+              I&rsquo;m a student with a strong interest in data analysis, statistics, and programming.
+              My coursework involves data analysis projects, database systems, and statistical modelling.
+              I&rsquo;m drawn to machine learning and modern technologies, and I&rsquo;m working towards a career in data science.
+            </p>
+          </div>
+
+          <div class="about-photo-wrap">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" alt="Data analysis dashboard" class="about-photo">
+            <span class="about-photo-label">Data analysis</span>
+          </div>
+
         </div>
       </div>
-    </div>
+    </section>
 
-    <hr>
 
     <!-- PROJECTS -->
-    <div class="container" id="section2">
-      <p class="section-label">02 &nbsp; Projects</p>
-      <h2>Selected work</h2>
-      <div class="cards-wrapper">
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1509228627152-72ae9ae6848d" alt="Data visualisation">
-          <div class="card-body">
-            <h3>Film Data Analysis</h3>
-            <p>Analysis of film ratings and popularity, with data visualisation of key findings.</p>
+    <section id="section-projects">
+      <div class="container">
+        <p class="section-label">02 &nbsp; Projects</p>
+        <h2>Selected work</h2>
+
+        <div class="cards-wrapper">
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1509228627152-72ae9ae6848d" alt="Film data visualisation">
+            <div class="card-body">
+              <h3>Film Data Analysis</h3>
+              <p>Analysis of film ratings and popularity, with data visualisation of key findings.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Crime data project">
+            <div class="card-body">
+              <h3>Crime Data Analysis</h3>
+              <p>Analysis of crime data from the state of Maryland, including trend visualisation.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="section-skills" class="dark-band">
+      <div class="dark-band-bg-text" aria-hidden="true">03</div>
+      <div class="container">
+        <p class="section-label">03 &nbsp; Skills</p>
+        <h2>Tech stack</h2>
+
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Frontend</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript basics</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>Backend &amp; Data analysis</h3>
+            <ul>
+              <li>Python</li>
+              <li>R</li>
+              <li>SQL</li>
+              <li>Excel</li>
+              <li>Gretl</li>
+            </ul>
           </div>
         </div>
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Data project">
-          <div class="card-body">
-            <h3>Crime Data Analysis</h3>
-            <p>Analysis of crime data from the state of Maryland, including trend visualisation.</p>
+
+        <div class="skill-group skill-group--narrow">
+          <h3>Development plan</h3>
+          <ol>
+            <li>Machine Learning</li>
+            <li>Advanced data analysis</li>
+            <li>Power BI</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CONTACT & TABLE -->
+    <section id="section-contact">
+      <div class="container">
+        <p class="section-label">04 &nbsp; Skills overview</p>
+        <h2>Competency table</h2>
+
+        <table class="skills-table">
+          <thead>
+            <tr>
+              <th scope="col">Technology</th>
+              <th scope="col">Level</th>
+              <th scope="col">Application</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Python</td><td>Intermediate</td><td>Data analysis</td></tr>
+            <tr><td>R</td><td>Intermediate</td><td>Statistics</td></tr>
+            <tr><td>Excel</td><td>Intermediate</td><td>Data analysis</td></tr>
+            <tr><td>SQL</td><td>Basic</td><td>Databases</td></tr>
+            <tr><td>Gretl</td><td>Basic</td><td>Econometrics</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Contact</h2>
+        <address class="contact-links">
+
+          <div class="contact-link-item">
+            <span class="contact-link-label">Email</span>
+            <a href="mailto:jakubgroblickif@gmail.com" class="contact-link-value">jakubgroblickif@gmail.com</a>
           </div>
-        </div>
+
+          <div class="contact-link-item">
+            <span class="contact-link-label">GitHub</span>
+            <a href="https://github.com/Jablon22" class="contact-link-value" target="_blank" rel="noopener noreferrer">github.com/Jablon22</a>
+          </div>
+
+          <div class="contact-link-item">
+            <span class="contact-link-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/jakub-groblicki-507135308/" class="contact-link-value" target="_blank" rel="noopener noreferrer">Jakub Groblicki</a>
+          </div>
+
+        </address>
       </div>
-    </div>
+    </section>
 
-  </div>
-
-
-  <!-- DARK BAND — SKILLS -->
-  <div class="dark-band" id="section3">
-    <div class="dark-band-bg-text">03</div>
-    <p class="section-label">03 &nbsp; Skills</p>
-    <h2>Tech stack</h2>
-
-    <div class="skills-grid">
-      <div class="skill-group">
-        <h3>Frontend</h3>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript basics</li>
-        </ul>
-      </div>
-      <div class="skill-group">
-        <h3>Backend / Data analysis</h3>
-        <ul>
-          <li>Python</li>
-          <li>R</li>
-          <li>SQL</li>
-          <li>Excel</li>
-          <li>Gretl</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="skill-group" style="max-width: 360px;">
-      <h3>Development plan</h3>
-      <ol>
-        <li>Machine Learning</li>
-        <li>Advanced data analysis</li>
-        <li>Power BI</li>
-      </ol>
-    </div>
-  </div>
+  </main>
 
 
-  <div class="container-main">
+  <!-- =============================================
+       FOOTER
+       ============================================= -->
+  <footer>
+    <p>Jakub Groblicki &nbsp;&middot;&nbsp; 2026 &copy;</p>
+  </footer>
 
-    <!-- TABLE + CONTACT -->
-    <div class="container" id="section4">
-      <p class="section-label">04 &nbsp; Skills overview</p>
-      <h2>Competency table</h2>
 
-      <table style="margin-top: 48px;">
-        <thead>
-          <tr>
-            <th>Technology</th>
-            <th>Level</th>
-            <th>Application</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Python</td><td>Intermediate</td><td>Data analysis</td></tr>
-          <tr><td>R</td><td>Intermediate</td><td>Statistics</td></tr>
-          <tr><td>Excel</td><td>Intermediate</td><td>Data analysis</td></tr>
-          <tr><td>SQL</td><td>Basic</td><td>Databases</td></tr>
-          <tr><td>Gretl</td><td>Basic</td><td>Econometrics</td></tr>
-        </tbody>
-      </table>
+  <!-- JavaScript — loaded at end of body for performance -->
+  <script src="Scripts/main.js"></script>
 
-      <h2>Contact</h2>
-      <div class="contact-links">
-        <div class="contact-link-item">
-          <span class="contact-link-label">Email</span>
-          <a href="/cdn-cgi/l/email-protection#89e3e8e2fcebeefbe6ebe5e0eae2e0efc9eee4e8e0e5a7eae6e4" class="contact-link-value"><span class="__cf_email__" data-cfemail="aac0cbc1dfc8cdd8c5c8c6c3c9c1c3cceacdc7cbc3c684c9c5c7">[email&#160;protected]</span></a>
-        </div>
-        <div class="contact-link-item">
-          <span class="contact-link-label">GitHub</span>
-          <a href="https://github.com/Jablon22" class="contact-link-value" target="_blank">github.com/Jablon22</a>
-        </div>
-        <div class="contact-link-item">
-          <span class="contact-link-label">LinkedIn</span>
-          <a href="https://www.linkedin.com/in/jakub-groblicki-507135308/" class="contact-link-value" target="_blank">Jakub Groblick
+</body>
+</html>
