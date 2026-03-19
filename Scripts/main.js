@@ -8,20 +8,18 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ─────────────────────────────────────────
      1. HAMBURGER MENU
      Toggles mobile navigation open/closed.
-     Uses aria-expanded for accessibility.
   ───────────────────────────────────────── */
   const hamburger = document.getElementById('hamburger');
   const mainNav   = document.getElementById('main-nav');
 
   if (hamburger && mainNav) {
-
     hamburger.addEventListener('click', () => {
       const isOpen = mainNav.classList.toggle('is-open');
       hamburger.classList.toggle('is-open', isOpen);
       hamburger.setAttribute('aria-expanded', isOpen);
     });
 
-    // Close menu when a nav link is clicked
+    // Close on nav link click
     mainNav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mainNav.classList.remove('is-open');
@@ -30,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Close menu when clicking outside
+    // Close on outside click
     document.addEventListener('click', (e) => {
       if (!hamburger.contains(e.target) && !mainNav.contains(e.target)) {
         mainNav.classList.remove('is-open');
@@ -38,69 +36,75 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.setAttribute('aria-expanded', 'false');
       }
     });
-
   }
 
 
   /* ─────────────────────────────────────────
      2. ACTIVE NAV LINK ON SCROLL
-     Uses IntersectionObserver to detect
-     which section is currently in view
-     and highlights the matching nav link.
+     Highlights the nav link matching the
+     section currently in the viewport.
   ───────────────────────────────────────── */
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('#main-nav a');
 
   if (sections.length && navLinks.length) {
-
-    const observerOptions = {
-      root: null,           // observe relative to viewport
-      rootMargin: '-40% 0px -55% 0px',  // trigger when section is in middle band
-      threshold: 0
-    };
-
-    const observer = new IntersectionObserver((entries) => {
+    const navObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // Remove active class from all links
           navLinks.forEach(link => link.classList.remove('active'));
-
-          // Add active class to matching link
-          const activeLink = document.querySelector(
+          const active = document.querySelector(
             `#main-nav a[href="#${entry.target.id}"]`
           );
-          if (activeLink) activeLink.classList.add('active');
+          if (active) active.classList.add('active');
         }
       });
-    }, observerOptions);
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
 
-    sections.forEach(section => observer.observe(section));
-
+    sections.forEach(s => navObserver.observe(s));
   }
 
 
   /* ─────────────────────────────────────────
-     3. SCROLL-TRIGGERED FADE-IN ANIMATION
-     Elements with class .fade-in-on-scroll
-     animate in when they enter the viewport.
-     (Sections animate automatically via CSS;
-     this is a utility for future elements.)
+     3. SKILL BARS ANIMATION
+     Bars animate to their target width when
+     the skills section scrolls into view.
   ───────────────────────────────────────── */
-  const fadeElements = document.querySelectorAll('.fade-in-on-scroll');
+  const skillBars = document.querySelectorAll('.skill-bar-fill');
 
-  if (fadeElements.length) {
+  if (skillBars.length) {
+    const barObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const target = entry.target;
+          const width  = target.getAttribute('data-width');
+          target.style.width = width + '%';
+          barObserver.unobserve(target); // animate once only
+        }
+      });
+    }, { threshold: 0.3 });
 
+    skillBars.forEach(bar => barObserver.observe(bar));
+  }
+
+
+  /* ─────────────────────────────────────────
+     4. SCROLL FADE-IN
+     Elements with class .fade-in become
+     visible when they enter the viewport.
+  ───────────────────────────────────────── */
+  const fadeEls = document.querySelectorAll('.fade-in');
+
+  if (fadeEls.length) {
     const fadeObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
-          fadeObserver.unobserve(entry.target); // animate only once
+          fadeObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.12 });
 
-    fadeElements.forEach(el => fadeObserver.observe(el));
-
+    fadeEls.forEach(el => fadeObserver.observe(el));
   }
 
 });

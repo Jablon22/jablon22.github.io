@@ -9,12 +9,8 @@
   <meta name="description" content="Personal site of Jakub Groblicki — Computer Science and Econometrics student interested in data analysis and statistics.">
   <meta name="keywords" content="portfolio, data analysis, Python, R, econometrics, statistics">
 
-  <link rel="shortcut icon" href="Images/favicon.jpg">
-
-  <!-- Google Fonts -->
+  <link rel="shortcut icon" href="Images/faviconJG.png">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
-
-  <!-- Stylesheets -->
   <link rel="stylesheet" href="Styles/styles.css">
   <link rel="stylesheet" href="Styles/style_top_menu.css">
 
@@ -27,7 +23,6 @@
   <header class="top-menu" id="top-menu">
     <div class="logo">JG</div>
 
-    <!-- Hamburger button — visible on mobile only -->
     <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
       <span></span>
       <span></span>
@@ -44,7 +39,7 @@
 
 
   <!-- =============================================
-       HERO SECTION
+       HERO
        ============================================= -->
   <section class="hero" id="hero">
     <div class="hero-text">
@@ -70,7 +65,7 @@
        ============================================= -->
   <main>
 
-    <!-- ABOUT -->
+    <!-- ── ABOUT ── -->
     <section id="section-about">
       <div class="container">
         <p class="section-label">01 &nbsp; About</p>
@@ -79,14 +74,24 @@
           <div class="about-text">
             <h2>Who I am</h2>
             <p>
-              I&rsquo;m a student with a strong interest in data analysis, statistics, and programming.
-              My coursework involves data analysis projects, database systems, and statistical modelling.
-              I&rsquo;m drawn to machine learning and modern technologies, and I&rsquo;m working towards a career in data science.
+              I&rsquo;m a Computer Science &amp; Econometrics student with a genuine interest in finding
+              patterns in data and turning them into clear, useful insights. My coursework spans data
+              analysis, statistical modelling, and database systems. Outside the curriculum, I&rsquo;m
+              working towards machine learning and building a foundation in data science &mdash; the
+              kind of work where rigour and curiosity go hand in hand.
             </p>
+
+            <!-- Quick-facts strip -->
+            <ul class="about-facts">
+              <li><span class="fact-label">Based in</span> Krak&oacute;w, Poland</li>
+              <li><span class="fact-label">Studying</span> Computer Science &amp; Econometrics</li>
+              <li><span class="fact-label">Interests</span> Data science, statistics, ML</li>
+            </ul>
           </div>
 
           <div class="about-photo-wrap">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" alt="Data analysis dashboard" class="about-photo">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800"
+                 alt="Data analysis dashboard" class="about-photo">
             <span class="about-photo-label">Data analysis</span>
           </div>
 
@@ -95,7 +100,7 @@
     </section>
 
 
-    <!-- PROJECTS -->
+    <!-- ── PROJECTS ── -->
     <section id="section-projects">
       <div class="container">
         <p class="section-label">02 &nbsp; Projects</p>
@@ -104,18 +109,74 @@
         <div class="cards-wrapper">
 
           <article class="card">
-            <img src="https://images.unsplash.com/photo-1509228627152-72ae9ae6848d" alt="Film data visualisation">
+            <div class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1509228627152-72ae9ae6848d"
+                   alt="Film data visualisation">
+              <span class="card-tag">Python &middot; Pandas &middot; Matplotlib</span>
+            </div>
             <div class="card-body">
               <h3>Film Data Analysis</h3>
-              <p>Analysis of film ratings and popularity, with data visualisation of key findings.</p>
+              <p>Analysis of film ratings and popularity across genres, with visualisation of trends and statistical correlations between audience scores and box office performance.</p>
+              <div class="card-links">
+                <a href="https://github.com/Jablon22" class="card-link" target="_blank" rel="noopener noreferrer">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  GitHub
+                </a>
+              </div>
             </div>
           </article>
 
           <article class="card">
-            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Crime data project">
+            <div class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+                   alt="Crime data project">
+              <span class="card-tag">R &middot; ggplot2 &middot; dplyr</span>
+            </div>
             <div class="card-body">
               <h3>Crime Data Analysis</h3>
-              <p>Analysis of crime data from the state of Maryland, including trend visualisation.</p>
+              <p>Exploratory and statistical analysis of crime data from the state of Maryland. Includes time-series trend visualisation, geographic breakdowns, and regression modelling.</p>
+              <div class="card-links">
+                <a href="https://github.com/Jablon22" class="card-link" target="_blank" rel="noopener noreferrer">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3"
+                   alt="Trading simulator">
+              <span class="card-tag">Python &middot; Pandas &middot; NumPy</span>
+            </div>
+            <div class="card-body">
+              <h3>Mini Trading Simulator</h3>
+              <p>A lightweight trading simulator allowing users to test basic buy/sell strategies on historical market data. Tracks portfolio value, cash balance, and transaction history.</p>
+              <div class="card-links">
+                <a href="https://github.com/Jablon22" class="card-link" target="_blank" rel="noopener noreferrer">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1642790551116-18e150f248e3"
+                   alt="Portfolio risk analysis">
+              <span class="card-tag">Python &middot; SciPy &middot; Matplotlib</span>
+            </div>
+            <div class="card-body">
+              <h3>Portfolio Return &amp; Risk Analysis</h3>
+              <p>Quantitative analysis of multi-asset portfolio performance. Calculates expected returns, volatility, Sharpe ratio, and efficient frontier to support investment decision-making.</p>
+              <div class="card-links">
+                <a href="https://github.com/Jablon22" class="card-link" target="_blank" rel="noopener noreferrer">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  GitHub
+                </a>
+              </div>
             </div>
           </article>
 
@@ -124,86 +185,138 @@
     </section>
 
 
-    <!-- SKILLS -->
+    <!-- ── SKILLS ── -->
     <section id="section-skills" class="dark-band">
       <div class="dark-band-bg-text" aria-hidden="true">03</div>
       <div class="container">
         <p class="section-label">03 &nbsp; Skills</p>
         <h2>Tech stack</h2>
+        <div class="skills-inner">
 
         <div class="skills-grid">
+
+          <!-- Skill bars — left column -->
+          <div class="skill-group">
+            <h3>Data &amp; Analysis</h3>
+            <ul class="skill-bars">
+              <li>
+                <div class="skill-bar-header">
+                  <span class="skill-name">Python</span>
+                  <span class="skill-level">Intermediate</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="60"></div>
+                </div>
+              </li>
+              <li>
+                <div class="skill-bar-header">
+                  <span class="skill-name">R</span>
+                  <span class="skill-level">Intermediate</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="60"></div>
+                </div>
+              </li>
+              <li>
+                <div class="skill-bar-header">
+                  <span class="skill-name">Excel</span>
+                  <span class="skill-level">Intermediate</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="60"></div>
+                </div>
+              </li>
+              <li>
+                <div class="skill-bar-header">
+                  <span class="skill-name">SQL</span>
+                  <span class="skill-level">Basic</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="30"></div>
+                </div>
+              </li>
+              <li>
+                <div class="skill-bar-header">
+                  <span class="skill-name">Power BI</span>
+                  <span class="skill-level">Basic</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="30"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Tags — right column -->
           <div class="skill-group">
             <h3>Frontend</h3>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript basics</li>
+            <ul class="skill-bars">
+              <li>
+                <div class="skill-bar-header">
+                  <span class="skill-name">HTML</span>
+                  <span class="skill-level">Intermediate</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="60"></div>
+                </div>
+              </li>
+              <li>
+                <div class="skill-bar-header">
+                  <span class="skill-name">CSS</span>
+                  <span class="skill-level">Intermediate</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="55"></div>
+                </div>
+              </li>
+              <li>
+                <div class="skill-bar-header">
+                  <span class="skill-name">JavaScript</span>
+                  <span class="skill-level">Basic</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="25"></div>
+                </div>
+              </li>
             </ul>
+
+            <h3 style="margin-top: 40px;">Development plan</h3>
+            <ol class="plan-list">
+              <li>Machine Learning</li>
+              <li>Advanced data analysis</li>
+            </ol>
           </div>
 
-          <div class="skill-group">
-            <h3>Backend &amp; Data analysis</h3>
-            <ul>
-              <li>Python</li>
-              <li>R</li>
-              <li>SQL</li>
-              <li>Excel</li>
-              <li>Gretl</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="skill-group skill-group--narrow">
-          <h3>Development plan</h3>
-          <ol>
-            <li>Machine Learning</li>
-            <li>Advanced data analysis</li>
-            <li>Power BI</li>
-          </ol>
-        </div>
+        </div><!-- /.skills-grid -->
+        </div><!-- /.skills-inner -->
       </div>
     </section>
 
 
-    <!-- CONTACT & TABLE -->
-    <section id="section-contact">
+    <!-- ── CONTACT ── -->
+    <section id="section-contact" class="contact-section">
       <div class="container">
-        <p class="section-label">04 &nbsp; Skills overview</p>
-        <h2>Competency table</h2>
+        <p class="section-label">04 &nbsp; Contact</p>
+        <h2>Get in touch</h2>
+        <p class="contact-intro">Open to internships, collaborations, and interesting data problems.</p>
 
-        <table class="skills-table">
-          <thead>
-            <tr>
-              <th scope="col">Technology</th>
-              <th scope="col">Level</th>
-              <th scope="col">Application</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Python</td><td>Intermediate</td><td>Data analysis</td></tr>
-            <tr><td>R</td><td>Intermediate</td><td>Statistics</td></tr>
-            <tr><td>Excel</td><td>Intermediate</td><td>Data analysis</td></tr>
-            <tr><td>SQL</td><td>Basic</td><td>Databases</td></tr>
-            <tr><td>Gretl</td><td>Basic</td><td>Econometrics</td></tr>
-          </tbody>
-        </table>
-
-        <h2>Contact</h2>
         <address class="contact-links">
 
           <div class="contact-link-item">
             <span class="contact-link-label">Email</span>
-            <a href="mailto:jakubgroblickif@gmail.com" class="contact-link-value">jakubgroblickif@gmail.com</a>
+            <a href="/cdn-cgi/l/email-protection#197378726c7b7e6b767b75707a72707f597e74787075377a7674" class="contact-link-value"><span class="__cf_email__" data-cfemail="90faf1fbe5f2f7e2fff2fcf9f3fbf9f6d0f7fdf1f9fcbef3fffd">[email&#160;protected]</span></a>
           </div>
 
           <div class="contact-link-item">
             <span class="contact-link-label">GitHub</span>
-            <a href="https://github.com/Jablon22" class="contact-link-value" target="_blank" rel="noopener noreferrer">github.com/Jablon22</a>
+            <a href="https://github.com/Jablon22" class="contact-link-value"
+               target="_blank" rel="noopener noreferrer">github.com/Jablon22</a>
           </div>
 
           <div class="contact-link-item">
             <span class="contact-link-label">LinkedIn</span>
-            <a href="https://www.linkedin.com/in/jakub-groblicki-507135308/" class="contact-link-value" target="_blank" rel="noopener noreferrer">Jakub Groblicki</a>
+            <a href="https://www.linkedin.com/in/jakub-groblicki-507135308/" class="contact-link-value"
+               target="_blank" rel="noopener noreferrer">Jakub Groblicki</a>
           </div>
 
         </address>
@@ -212,7 +325,6 @@
 
   </main>
 
-
   <!-- =============================================
        FOOTER
        ============================================= -->
@@ -220,8 +332,6 @@
     <p>Jakub Groblicki &nbsp;&middot;&nbsp; 2026 &copy;</p>
   </footer>
 
-
-  <!-- JavaScript — loaded at end of body for performance -->
   <script src="Scripts/main.js"></script>
 
 </body>
