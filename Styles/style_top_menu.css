@@ -7,10 +7,10 @@
 .top-menu {
   position: sticky;
   top: 0;
-  background: rgba(242, 237, 230, 0.97);
+  background: rgba(28, 25, 20, 0.97);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(28, 25, 20, 0.1);
+  border-bottom: 1px solid rgba(201, 169, 110, 0.15);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +24,7 @@
   font-family: 'Cormorant Garamond', 'Garamond', Georgia, serif;
   font-weight: 300;
   font-size: 22px;
-  color: #1c1914;
+  color: #f2ede6;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   position: relative;
@@ -65,7 +65,7 @@
   display: block;
   width: 100%;
   height: 1px;
-  background: #1c1914;
+  background: #f2ede6;
   transition: transform 0.35s ease, opacity 0.35s ease;
   transform-origin: center;
 }
@@ -84,8 +84,8 @@
   top: 64px;
   left: 0;
   right: 0;
-  background: rgba(242, 237, 230, 0.99);
-  border-bottom: 1px solid rgba(140, 106, 63, 0.18);
+  background: rgba(28, 25, 20, 0.99);
+  border-bottom: 1px solid rgba(201, 169, 110, 0.18);
   padding: 16px 0;
 }
 
@@ -95,7 +95,7 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
   font-size: 10px;
   font-weight: 400;
-  color: #7a7168;
+  color: rgba(242, 237, 230, 0.5);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.25em;
@@ -117,7 +117,7 @@
 
 .top-menu a:hover        { color: #8c6a3f; }
 .top-menu a:hover::before{ width: 24px; }
-.top-menu a:visited      { color: #7a7168; }
+.top-menu a:visited      { color: rgba(242, 237, 230, 0.5); }
 .top-menu a:focus        { outline: 2px solid #8c6a3f; outline-offset: 3px; color: #8c6a3f; }
 
 /* Active section highlight (set by JS) */
@@ -143,10 +143,10 @@
 
   .top-menu a {
     padding: 8px 20px;
-    border-right: 1px solid rgba(28, 25, 20, 0.06);
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
   }
 
-  .top-menu a:first-child { border-left: 1px solid rgba(28, 25, 20, 0.06); }
+  .top-menu a:first-child { border-left: 1px solid rgba(255, 255, 255, 0.06); }
 
   .top-menu a::before {
     left: 50%;
