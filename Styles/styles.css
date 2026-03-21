@@ -416,7 +416,7 @@ p {
 
 /* Centered wrapper for all skills content */
 .skills-inner {
-  max-width: 860px;
+  max-width: 80%;
 }
 
 .skills-grid {
@@ -659,7 +659,12 @@ nav a.active { color: var(--accent); }
   .cards-wrapper .card { flex: unset; }
   .card-image-wrap img { height: 260px; }
 
-  .skills-grid { flex-direction: row; gap: 80px; align-items: start; }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
 
   .about-photo-wrap { display: block; }
   .about-grid {
